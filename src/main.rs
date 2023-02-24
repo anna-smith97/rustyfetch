@@ -9,9 +9,11 @@ const PAD_TOP: u32 = 2;
 const PAD_BOTTOM: u32 = 2;
 const HOSTNAME_FILE: &str = "/proc/sys/kernel/hostname";
 const OS_RELEASE_FILE: &str = "/etc/os-release";
+const DASH = String::from("-");
+    
 
-    const DASH = String::from("-");
-    let nl = String::from("\n");
+let nl = String::from("\n");
+
 fn get_var(envvar: &str) -> String {
     let return_val = env::var(envvar).expect("");
     return return_val;
